@@ -10,10 +10,6 @@ WeldMaster is a sleek and modern landing page designed to showcase a fictional w
 - **JavaScript Effects**: Interactive spark effects on buttons and smooth scrolling navigation.
 - **Dark Theme**: Sleek and modern color scheme.
 
-## How to View
-1. Clone the repository from GitHub.
-2. Open `index.html` in your web browser.
-
 ## Design Choices
 - **Color Scheme**: Dark theme with vibrant accent colors for a modern look.
 - **Typography**: Clean, sans-serif fonts for readability.
