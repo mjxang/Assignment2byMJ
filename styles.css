@@ -1,6 +1,6 @@
-/*base styles*/
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: #2c3e50;
@@ -11,7 +11,7 @@ body {
     box-sizing: border-box;
 }
 
-/*Header styles*/
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: #e74c3c;
-    animation: slideinleft 1s ease-out;
+    animation: slideInLeft 1s ease-out;
 }
 
 nav ul {
@@ -46,6 +46,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* Main styles */
 main {
     padding: 2rem;
 }
@@ -54,7 +55,7 @@ section {
     margin-bottom: 2rem;
 }
 
-h1,h2 {
+h1, h2 {
     color: #e74c3c;
     text-align: center;
     animation: fadeIn 2s ease-in;
@@ -64,6 +65,13 @@ p {
     line-height: 1.6;
     text-align: center;
     animation: fadeIn 2s ease-in;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-buttons {
@@ -95,6 +103,30 @@ p {
     display: block;
 }
 
+/* Hero section with background image */
+#home {
+    position: relative;
+    background: url('https://jooinn.com/images/welding-process-6.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Spark styles */
 .spark-container {
     position: absolute;
     top: 50%;
@@ -125,6 +157,7 @@ p {
     }
 }
 
+/* Footer styles */
 footer {
     background: #34495e;
     text-align: center;
@@ -132,9 +165,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    animation: slideInUp 1s ease-out
+    animation: slideInUp 1s ease-out;
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -162,6 +196,7 @@ footer {
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -169,15 +204,22 @@ footer {
     }
 }
 
-nav ul { 
-    flex-direction: column;
-    gap: 0.5rem;
-}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-main {
-    padding: 1rem;
-}
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-footer {
-    padding: 0.5rem;
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
 }
